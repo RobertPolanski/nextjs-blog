@@ -3,7 +3,6 @@ import Link from "next/link";
 import { getSortedPostsData } from '../lib/posts';
 import Layout from "../components/layout";
 import utilStyles from "../styles/utils.module.css";
-import Date from '../components/date';
 
 
 export async function getStaticProps() {
@@ -35,7 +34,7 @@ export default function Home({ allPostsData }) {
                       </Link>
                       <br />
                       <small className={utilStyles.lightText}>
-                          <Date dateString={date} />
+                          {date}
                       </small>
                   </li>
               ))}
